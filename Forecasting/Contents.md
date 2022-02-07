@@ -17,7 +17,7 @@
 
 - Decomposition:<br>
 <ul>
-    <img src="TS Components.png">
+    <img src="TS Components.png"><br>
   A useful abstraction for selecting forecasting methods is to break a time series down into systematic and unsystematic components.
   <ul>
   <li><b>Systematic:</b> Components of the time series that have consistency or recurrence and can be described and modeled.
