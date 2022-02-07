@@ -39,35 +39,40 @@
       </ul>
     </ul>
   <h2>3) Time series Forecasting: </h2><br>
-<ul>
-- Statistical methods:
-  
-  - Common Approaches:
-      - Trend, Seasonal, Residual Decompositions:
-          - Seasonal Extraction in ARIMA Time Series (SEATS).
-          - Seasonal and Trend decomposition using Loess (STL). 
-          - Exponential smoothing:
-              - Single Exponential Smoothing, or SES, for univariate data without trend or seasonality.
-              - Double Exponential Smoothing for univariate data with support for trends.
-              - Triple Exponential Smoothing, or Holt-Winters Exponential Smoothing, with support for both trends and seasonality.(TES)
-      - Autoregressive Models (AR).
-      - Moving Average Models (MA).
-
-  - Box–Jenkins Approaches: 
-      - ARIMA.
-      - SARIMA.
-
-- Machine Learning Methods
-    - KNN.
-    - SVR.
-    - LR.
-    - ElasticNet.
-    - Lasso.
-    
-- Deep Learning Methods:
-    - MLP.
-    - CNN.
-    - LSTM.
-  
- </ul>
+    <li> Statistical methods:
+      <ul>
+        <li> Common Approaches:
+          <ul>
+          <li>Trend, Seasonal, Residual Decompositions:
+          <li> Seasonal Extraction in ARIMA Time Series (SEATS).
+          <li> Seasonal and Trend decomposition using Loess (STL). 
+          <li> Exponential smoothing:
+            <ul>
+              <li> Single Exponential Smoothing, or SES, for univariate data without trend or seasonality.
+              <li> Double Exponential Smoothing for univariate data with support for trends.
+              <li> Triple Exponential Smoothing, or Holt-Winters Exponential Smoothing, with support for both trends and seasonality.(TES)
+            </ul>
+          <li> Autoregressive Models (AR).
+          <li> Moving Average Models (MA).
+          </ul>
+      <li> Box–Jenkins Approaches: 
+        <ul>
+          <li> ARIMA.
+          <li> SARIMA.
+        </ul>
+    </ul>
+    <li> Machine Learning Methods
+      <ul>
+        <li> KNN.
+        <li> SVR.
+        <li> LR.
+        <li> ElasticNet.
+        <li> Lasso.
+      </ul>
+    <li> Deep Learning Methods:
+      <ul>
+        <li> MLP.
+        <li> CNN.
+        <li> LSTM.
+      </ul>
       </ul>
