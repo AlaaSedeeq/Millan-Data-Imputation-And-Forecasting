@@ -65,7 +65,7 @@
       <ul>
         <li> KNN.
         <li> SVR.
-        <li> LR.
+        <li> Linear Regression.
         <li> ElasticNet.
         <li> Lasso.
       </ul>
