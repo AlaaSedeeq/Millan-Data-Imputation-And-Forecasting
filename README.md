@@ -3,11 +3,13 @@
   <h3>1) Gather and preprocess the <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EGZHFV">Telecommunications Millan Data</a></h3><br>
     <ul>
       <li> Read the txt-file as csv.
-      <li> Groupe the data by time and grid.
-      <li> Concatinate all the data in one DataFrame.
-      <li> Convevrt the full data into a numpy array, where each sample is a (100, 100) matrix.
-      <li> Each matrix is the measurements for all grids at a spicific time step.
-      <li> Each value in the matrix is a measurement for one grid at a this time step.
+      <li> Group the data by time and grid.
+      <li> Concatenate all the data in one DataFrame.
+      <li> Convert the full data into a numpy array, where each sample is a (100, 100) matrix.
+        <ul>
+          <li> Each sample is a matrix which is the measurements for all grids at a specific time step.
+          <li> Each value in the matrix is a measurement for one grid at a this time step.
+        </ul>
     </ul>
   <h3>2) Apply many missing data imputation methods to the data</h3><br>
   <ul>
