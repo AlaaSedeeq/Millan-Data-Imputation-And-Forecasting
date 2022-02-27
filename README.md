@@ -65,7 +65,7 @@ This dataset provides information about the telecommunication activity over the 
 The dataset reports lines in the format above for 10,000 areas (organized in a regular grid) during a continued period of two months.
 A preliminary description of the data is provided in a paper published in Scientific Data by Barlacchi et al. [Link](https://www.nature.com/articles/sdata201555). <br>While the paper presents the many datasets that were made available for the other challenges, only two are relevant to the above mentioned tasks:
 
-<img src='Data preparation and imputaion/images/animation.gif' align='center'></img>
+<img src='Data preparation and imputaion/images/animation.gif' align='center' height='500' width='1000'></img>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
