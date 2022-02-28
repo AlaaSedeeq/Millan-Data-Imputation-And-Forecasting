@@ -1091,7 +1091,7 @@ def dict_to_dataframe(Results:dict, forecast_grids:list, day_1:int=21, std_round
     
     Returns
     ----------
-    Two numpy arrays(X, y).
+    Multi-column pandas DataFrame.
     """
     
     columns=[('1-Day', 'MAPE'), ('1-Day', 'NRMSE'), 
