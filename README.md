@@ -168,17 +168,16 @@ We will use the sliding window technique with shifting window with window size o
 
 # Files Structure:
 <span id="struct"><span>
- 1. [Data set description.](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/final%20work/Understand_data_documented.ipynb)
+ 1. [Data set description.](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/Understand_data_documented.ipynb)
  2. Data pre-processing.
-	 - [Data cleaning](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/final%20work/data_preperation_documented.ipynb).
-	 - [Data Exploration](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/final%20work/Exploring_Data_documented.ipynb).
-	 - [Outliers Detection](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/tree/main/Time-Series-Anomaly-Detection).
-		 - [Decomposition Method](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Time-Series-Anomaly-Detection/Decomposition%20Method.ipynb).
-		 - [Isolation Forest Method](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Time-Series-Anomaly-Detection/Isolation%20Forest%20Method.ipynb).
-		 - [LSTM Autoencoders method](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Time-Series-Anomaly-Detection/LSTM%20Autoencoders.ipynb).
-		 - [Tokey's Method](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Time-Series-Anomaly-Detection/Tukeys%20Box%20plot%20Method.ipynb).
-		 - [Mega notebook](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Time-Series-Anomaly-Detection/Time%20Series%20Anomaly%20Detection%20All%20Work.ipynb).
-	 - [Missing Data Imputation](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20preparation%20and%20imputaion/Data%20preparation%20and%20imputaion.ipynb):
+	 - [Data cleaning](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/data_preperation_documented.ipynb).
+	 - [Data Exploration](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/Exploring_Data_documented.ipynb).
+	 - [Outliers Detection](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/Time-Series-Anomaly-Detection/Time%20Series%20Anomaly%20Detection%20All%20Work.ipynb).
+		 - [Decomposition Method](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/Time-Series-Anomaly-Detection/Decomposition%20Method.ipynb).
+		 - [Isolation Forest Method](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/Time-Series-Anomaly-Detection/Isolation%20Forest%20Method.ipynb).
+		 - [LSTM Autoencoders method](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/Time-Series-Anomaly-Detection/LSTM%20Autoencoders.ipynb).
+		 - [Tokey's Method](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/Time-Series-Anomaly-Detection/Tukeys%20Box%20plot%20Method.ipynb).
+	 - [Missing Data Imputation](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/Data%20Preprocessing/Data%20preparation%20and%20imputaion/Data%20preparation%20and%20imputaion.ipynb):
 		 This File including several missing data imputation methods:
 			 
 		 - Conventional methods.
@@ -225,7 +224,8 @@ anomaly detection: A survey. arXiv preprint arXiv:1901.03407 (2019).
 29. Hansheng Ren, Bixiong Xu, Yujing Wang, Chao Yi, Congrui Huang, Xiaoyu Kou, Tony Xing, Mao Yang, Jie Tong, Qi Zhang, Time-Series Anomaly Detection Service at Microsoft.
 # Contributors:
 <span id="cont"><span>
-- Alaa Sedeeq
-- Abdullah Elsawy
-- Ibrahim Sayed
-- Tarek Mohamed
+- [Alaa Sedeeq](https://github.com/AlaaSedeeq/)
+- [Abdullah Elsawy](https://github.com/abdallah-elsawy)
+- [Ibrahim Sayed](https://github.com/IbrahimSayedMohammed)
+- [Tarek Mohamed](https://github.com/tarekmoha)
+
