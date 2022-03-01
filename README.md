@@ -91,7 +91,8 @@ analysis process is very critical and can make some changes in the end model, so
 	Due to computational limits, we will not be able to model every single
 grid square, so we had to choose some relevant subsets to make the rest of the analysis and modelling on it, we decided to choose 9 grids that had interesting behavior, the interesting behavior we mean is that it has more mean usage than the other grid squares, because these high loaded cells have more probabilities to face problems, and to choose these we have to know where the crowd lies.
 	![Subset usage](images/r3.png)
-	![Subset usage](images/r4.png)
+	<img src="Data Preprocessing/Data preparation and imputaion/images/animation.gif" height="500" width="700"></img>
+<!-- 	![Subset usage](Data Preprocessing/Data preparation and imputaion/images/animation.gif) -->
 - Check Time Series Characteristics:
 	Main characteristics for any time series data is the trend, seasonality and holidays.
 	![trend](images/seas.png)
