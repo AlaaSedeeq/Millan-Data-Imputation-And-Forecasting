@@ -74,28 +74,28 @@ The data has been collected over two months, from November 1st, 2013 to January 
 The data was taken from Two Italian cities, Milan and Terenteno, the area of milan is divided into 100X100 grid squares and Terenteno is divided into 117`X`98 grid square, as in the following figure, every grid square is 235 `X` 235 meters.[21] 
 This data measures the interaction between the humans and the mobile network through measuring the Call Detailed Records (CDRs) over a certain area in a given time interval, and the mechanism of taking these CDRs is as follows: 
 A new CDR is generated every time a user engages with the network entity, here is the Radio Base Station (RBS), this created CDR is recording the time of interaction between the user and the RBS.[21]
-![Dataset_structure](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r19.png)
+![Dataset_structure](images/r19.png)
 ### Data Exploration and cleaning:
 <span id="exp"></span>
 - Excluding roaming data: 
 	This dataset is collected from Milan City in Italy which is well known as a good destination for tourists around the world, and also Italy is an European country which means that by default the roaming service is activated.
-	![Roaming VS No romaing](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/image.NRFDI1.png)
+	![Roaming VS No romaing](images/image.NRFDI1.png)
 - Excluding other CDRs except the internet ones:
 	As we have mentioned in the Data Understanding section this data contains different Call Details record (CDRs), so we have studied their different effects on the overall CDRs to see the contributions and the effect of the CDRs to know whether there was a dominant one that can contribute the most to our analysis.
-	![Usage bar](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r1.png)
-	![usage line plot](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r2.png)
+	![Usage bar](images/r1.png)
+	![usage line plot](images/r2.png)
 - Resampling the data:
 	Any data in the world and be noisy, but this noise in the time series
 analysis process is very critical and can make some changes in the end model, so one of the main characteristics in time series data is it has measurement every predefined period, and here our period is 10 minutes so before modelling we have to make sure that at every 10 minutes we have a measurement
 - Choosing subsets:
 	Due to computational limits, we will not be able to model every single
 grid square, so we had to choose some relevant subsets to make the rest of the analysis and modelling on it, we decided to choose 9 grids that had interesting behavior, the interesting behavior we mean is that it has more mean usage than the other grid squares, because these high loaded cells have more probabilities to face problems, and to choose these we have to know where the crowd lies.
-	![Subset usage](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r3.png)
-	![Subset usage](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r4.png)
+	![Subset usage](images/r3.png)
+	![Subset usage](images/r4.png)
 - Check Time Series Characteristics:
 	Main characteristics for any time series data is the trend, seasonality and holidays.
-	![trend](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/seas.png)
-	![seasonality](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/seas2.png)
+	![trend](images/seas.png)
+	![seasonality](images/seas2.png)
 - Excluding the last 10 days: 
 	As we can see from figures 8. 11, 14 the last 10 days faces different trend and can be modeled as a separated model as they contain the Christmas and New Year’s holidays then we will exclude them to not biasing results and also we don’t have a yearly data to model them properly.
 ### Outliers detection:
@@ -104,27 +104,27 @@ Anomaly detection is the process of discover the event or the points which are u
 So, the detection of those points very important; because it give us an early step to make the emergency movements to control that un usual change.
 - Tokey's Box Plot:
 	in this method we depend on the pox plot to determine if the point is outlier or not and not only that it gives us the ability to decide if this outlier is possible or probable outlier point; by calculate the following parameters: 25th percentile (Q1), 75th percentile (Q3), interquartile range (IQR = Q3 – Q1), Lower inner fence: [Q1 – (1.5 * IQR)] , Upper , inner fence: [Q3 + (1.5 * IQR)], Lower outer fence: [Q1 – (3 * IQR)], Upper outer fence: [Q3 + (3 * IQR)].
-	![Tokes output](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r6.png)
+	![Tokes output](images/r6.png)
 - Isolation Forest Method:
 	Isolation Forest build using the decision trees which depend on the points that go deeper into the tree are not anomalies and points which go short distance have big probability to be anomalies, and it is unsupervised learning model which used without labeled data.[24]
-	![Isolation Ouput](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r8.png)
+	![Isolation Ouput](images/r8.png)
 - LSTM Autoencoders Method:
 	In this method we will depend on the detection using the forecasting by Deep Learning algorithms. In the forecasting methods we depend on predict the next point with the addition of some noise and make comparison of this point and the true point at this timestamp by finding the difference between the two points then add threshold finally find the anomalies by compare the difference of the two points with this threshold (we used the Mean absolute error MAE).[23]
-	![autoencoder output](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r9.png)
+	![autoencoder output](images/r9.png)
 - Seasonal-Trend Decomposition Method:
 	Signal decomposition aims to analysis our signal to its main three components Seasonal, trend and the residual (S, T, R). Seasonal is the signal component which contain the most rapidly pattern which occurs regular every certain time. Trend contain the general shape of the data over the whole dataset and finally the residual is the rest of the signal after extract the seasonal and trend of it, it is in somehow a random part over the signal which indicate it.[25]
-	![Decompse output](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r10.png)
+	![Decompse output](images/r10.png)
 ### Missing Data Imputation methods:
 <span id="miss"></span>
 It’s important for the time series not to have any missing data to be modeled properly because the time series data has to be equally spaced as the most of the models assume [10]. 
 We can assume that our Data is MCAR and there is no dependency In the missing data, and to know the accuracy of all methods we will assume some missing rate and know the accuracy of the method to capture the original value.
 - Conventional methods:
-	![conv_methods](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r11.png)
+	![conv_methods](images/r11.png)
 - Procedures:
-	![pro methods](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r12.png)
+	![pro methods](images/r12.png)
 - Learnable methods:
-	![Learn methods](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r13.png)
-![Imputation results](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r14.png)
+	![Learn methods](images/r13.png)
+![Imputation results](images/r14.png)
 ## Forecasting Stage:
 <span id="forecast"></span>
 ```mermaid
@@ -142,27 +142,27 @@ R --> L(Facebook Prophet)
 <span id="prefor"></span>
 In this step we want to check and test for different characteristics in our data to help us make the right choice of our modeling process, and this step has 3 other steps:
 - Seasonality Test:
-	![Daily](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r15.png)
-	![weekly](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r16.png)
+	![Daily](images/r15.png)
+	![weekly](images/r16.png)
 - Correlation test:
-	![correlation test](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r17.png)
+	![correlation test](images/r17.png)
 - Stationarity test:
-	![stationarity test](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r18.png)
+	![stationarity test](images/r18.png)
 ### Forecasting:
 <span id="ffor"></span>
 We will use the sliding window technique with shifting window with window size of 30 days (4320 steps) and forecasting for 1,2,3,7 Days (144, 288, 432, 1008 steps), and measureing the accuracy of our models by two metrics: Noramalized root mean sqaure error (NRMSE) and Mean absolute percentage error(MAPE), and the models that we have used:
 1. Statistical methods: ARIMA, Theta, Exponential Smoothing.
-	![Stat](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r20.png)
+	![Stat](images/r20.png)
 2. Machine Learning Methods: KNN, SVR, LR, ElasticNet, Lasso .
-	![machine](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r21.png)
+	![machine](images/r21.png)
 3. Deep learning methods: MLP, CNN, LSTM.
-	![deep](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r22.png)
+	![deep](images/r22.png)
 4. Facebook Prophet:
 	This model is a forecasting model developed by Facebook and depends on decomposing the time series into its main components Trend, seasonality, holidays effect and random part and by modelling each part individually [13].
-	![pro1](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r23.png)
-	![pro2](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r21.png)
+	![pro1](images/r23.png)
+	![pro2](images/r21.png)
 
-![final](https://github.com/AlaaSedeeq/Millan-Data-Imputation-And-Forecasting/blob/main/r25.png)
+![final](images/r25.png)
 
 
 
