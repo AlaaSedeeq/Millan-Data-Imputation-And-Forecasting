@@ -3,6 +3,7 @@
 ## 1) Anomely detection 
 Anomaly detection is the process of discover the event or the points which are unexpected at this position of the dataset or deviates from the normal pattern of the dataset. 
 So, the detection of those points very important; because it give us an early step to make the emergency movements to control that un usual change.
+We have worked on several methods Like:
 - Tokey's Box Plot:
 - Isolation Forest Method:
 - LSTM Autoencoders Method:
