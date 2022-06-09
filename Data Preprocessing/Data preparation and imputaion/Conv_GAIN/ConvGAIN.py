@@ -225,16 +225,20 @@ def Conv_GAIN(miss_data_x, conv_gain_parameters):
     X_mb = M_mb * X_mb + (1-M_mb) * Z_mb
 
     
+    # Impute the data
+    # run the model three times to impute the data after training
     split_no = int(no/3)
     imputed_data = np.zeros_like(miss_data_x)
     imputed_data[:split_no] = sess.run([G_sample], 
                                        feed_dict = {X: X_mb[:split_no], 
                                                     M: M_mb[:split_no], 
                                                     Z: Z_mb[:split_no]})[0]
+    
     imputed_data[split_no:2*split_no] = sess.run([G_sample], 
                                                  feed_dict = {X: X_mb[split_no:2*split_no], 
                                                               M: M_mb[split_no:2*split_no], 
                                                               Z: Z_mb[split_no:2*split_no]})[0]
+    
     imputed_data[2*split_no:] = sess.run([G_sample], 
                                          feed_dict = {X: X_mb[2*split_no:], 
                                                       M: M_mb[2*split_no:], 
