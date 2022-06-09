@@ -1,4 +1,4 @@
-## Explore many missing data imputation techniques
+## Exploring many missing data imputation techniques, then choose thr best to impute the data
 
 References:
 - GAIN: https://arxiv.org/abs/1806.02920
