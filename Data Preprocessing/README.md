@@ -9,7 +9,7 @@ We have worked on several methods Like:
 - LSTM Autoencoders Method:
 - Seasonal-Trend Decomposition Method:
 
-## 2) Missing data imputation models
+## 2) Missing data imputation
 We have several methods to impute time series data
 - Conventional methods:
   - Ignore or deletion.
