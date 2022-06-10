@@ -1,4 +1,4 @@
-## Exploring many missing data imputation techniques, then choose thr best to impute the data
+## Exploring many missing data imputation techniques, then choose the best one to impute the data before forecasting
 
 References:
 - GAIN: https://arxiv.org/abs/1806.02920
